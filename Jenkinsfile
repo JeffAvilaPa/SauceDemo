@@ -5,12 +5,8 @@ pipeline {
         string(name: 'TAGS', defaultValue: '@smoke or @regression', description: 'Tags to run')
     }
 
-    environment {
-        JAVA_HOME = '/opt/java/openjdk'
-        PATH = "${JAVA_HOME}/bin:${env.PATH}"
-    }
-
     tools {
+            jdk 'JDK17'
             maven 'Maven3'
         }
 

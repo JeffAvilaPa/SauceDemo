@@ -13,7 +13,7 @@ public class DriverManager {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromium");
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
+        options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu");
 
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();

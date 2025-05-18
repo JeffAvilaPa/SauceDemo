@@ -5,10 +5,15 @@ pipeline {
         string(name: 'TAGS', defaultValue: '@smoke or @regression', description: 'Tags to run')
     }
 
-    tools {
-        maven 'Maven 3.9.9' // asegúrate de que esta versión esté configurada en Jenkins
-        jdk 'corretto-17'   // asegúrate de tener configurado este JDK con ese nombre
+    environment {
+        JAVA_HOME = '/Library/Java/JavaVirtualMachines/amazon-corretto-17.jdk/Contents/Home'
+        PATH = "${JAVA_HOME}/bin:${env.PATH}"
     }
+
+    tools {
+        maven 'Maven3' // Asegúrate de que en Jenkins esté configurado un Maven con este nombre
+    }
+
 
     stages {
         stage('Checkout') {

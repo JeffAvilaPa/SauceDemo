@@ -10,6 +10,8 @@ public class DriverManager {
     private static WebDriver driver;
 
     public static WebDriver initializeDriver() {
+        WebDriverManager.chromedriver().browserVersion("136.0.7103.113").setup();
+
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless=new"); // Usar nueva API headless
         options.addArguments("--no-sandbox");

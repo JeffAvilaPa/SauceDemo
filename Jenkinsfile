@@ -6,13 +6,13 @@ pipeline {
     }
 
     environment {
-        JAVA_HOME = '/Library/Java/JavaVirtualMachines/amazon-corretto-17.jdk/Contents/Home'
+        JAVA_HOME = '/opt/java/openjdk'
         PATH = "${JAVA_HOME}/bin:${env.PATH}"
     }
 
     tools {
-        maven 'Maven3' // Asegúrate de que en Jenkins esté configurado un Maven con este nombre
-    }
+            maven 'Maven3'
+        }
 
 
     stages {

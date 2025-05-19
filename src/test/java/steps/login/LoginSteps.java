@@ -1,4 +1,4 @@
-package steps;
+package steps.login;
 
 import drivers.DriverManager;
 import io.cucumber.java.en.*;
